@@ -42,7 +42,7 @@
             
             NSDictionary *reviewJSON = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
 
-            NSArray *reviewArray = [reviewJSON objectForKey:@"reviews"];
+            NSArray *reviewArray = reviewJSON[@"reviews"];
 
             NSMutableArray *reviews = [NSMutableArray array];
             
@@ -55,7 +55,7 @@
 
                 [reviews addObject:reviewObject];
                 
-                NSLog(@"critic:%@, quote: %@", reviewObject.critic, reviewObject.quote);
+//                NSLog(@"critic:%@, quote: %@", reviewObject.critic, reviewObject.quote);
                 
             }
 
