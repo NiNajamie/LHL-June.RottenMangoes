@@ -105,8 +105,8 @@
                                     <constraint firstAttribute="height" constant="100" id="NBK-tK-sg9"/>
                                     <constraint firstAttribute="width" constant="280" id="lwC-kc-iQs"/>
                                 </constraints>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <color key="textColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <color key="textColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -213,7 +213,10 @@
                                     <constraint firstAttribute="height" constant="30" id="dgs-uh-LEs"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <state key="normal" title="Find a location near you"/>
+                                <state key="normal" title="Show Theatre Map"/>
+                                <connections>
+                                    <segue destination="GqI-sC-FnC" kind="push" id="scB-1J-qd7"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -258,6 +261,39 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Ce-A6-IVX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1060" y="-159"/>
+        </scene>
+        <!--MAP-->
+        <scene sceneID="wDu-Ii-flx">
+            <objects>
+                <viewController id="GqI-sC-FnC" customClass="MapViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bRa-gK-kQ0"/>
+                        <viewControllerLayoutGuide type="bottom" id="JC1-6o-1sD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VHZ-LS-Oqk">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="aXH-NY-Een">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="aXH-NY-Een" secondAttribute="trailing" id="6nt-sf-CfD"/>
+                            <constraint firstItem="aXH-NY-Een" firstAttribute="top" secondItem="bRa-gK-kQ0" secondAttribute="bottom" id="8sy-DS-CFd"/>
+                            <constraint firstItem="aXH-NY-Een" firstAttribute="leading" secondItem="VHZ-LS-Oqk" secondAttribute="leading" id="OXt-er-C3F"/>
+                            <constraint firstItem="JC1-6o-1sD" firstAttribute="top" secondItem="aXH-NY-Een" secondAttribute="bottom" id="kzp-JR-HjY"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="MAP" id="41w-LP-V8a"/>
+                    <connections>
+                        <outlet property="mapView" destination="aXH-NY-Een" id="AlI-Us-yaY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zla-gR-geh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1443" y="-159"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="lJC-jn-zg5">

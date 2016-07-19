@@ -16,6 +16,9 @@
 		962658E11D3D786A00A966C9 /* Movie.m in Sources */ = {isa = PBXBuildFile; fileRef = 962658E01D3D786A00A966C9 /* Movie.m */; };
 		962658E41D3D7DEC00A966C9 /* MovieCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 962658E31D3D7DEC00A966C9 /* MovieCollectionViewCell.m */; };
 		962658E71D3DB64500A966C9 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 962658E61D3DB64500A966C9 /* DetailViewController.m */; };
+		965DA7D91D3EB1C700C5F3DB /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 965DA7D81D3EB1C700C5F3DB /* CoreLocation.framework */; };
+		965DA7DC1D3EB22700C5F3DB /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 965DA7DB1D3EB22700C5F3DB /* MapViewController.m */; };
+		965DA7DE1D3EB65A00C5F3DB /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 965DA7DD1D3EB65A00C5F3DB /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +38,10 @@
 		962658E31D3D7DEC00A966C9 /* MovieCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieCollectionViewCell.m; sourceTree = "<group>"; };
 		962658E51D3DB64500A966C9 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		962658E61D3DB64500A966C9 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		965DA7D81D3EB1C700C5F3DB /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		965DA7DA1D3EB22700C5F3DB /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		965DA7DB1D3EB22700C5F3DB /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		965DA7DD1D3EB65A00C5F3DB /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +49,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				965DA7DE1D3EB65A00C5F3DB /* MapKit.framework in Frameworks */,
+				965DA7D91D3EB1C700C5F3DB /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,6 +60,8 @@
 		962658B91D3D6C0C00A966C9 = {
 			isa = PBXGroup;
 			children = (
+				965DA7DD1D3EB65A00C5F3DB /* MapKit.framework */,
+				965DA7D81D3EB1C700C5F3DB /* CoreLocation.framework */,
 				962658C41D3D6C0C00A966C9 /* LHL-June.RottenMangoes */,
 				962658C31D3D6C0C00A966C9 /* Products */,
 			);
@@ -69,6 +80,8 @@
 			children = (
 				962658C81D3D6C0C00A966C9 /* AppDelegate.h */,
 				962658C91D3D6C0C00A966C9 /* AppDelegate.m */,
+				965DA7DA1D3EB22700C5F3DB /* MapViewController.h */,
+				965DA7DB1D3EB22700C5F3DB /* MapViewController.m */,
 				962658E51D3DB64500A966C9 /* DetailViewController.h */,
 				962658E61D3DB64500A966C9 /* DetailViewController.m */,
 				962658DC1D3D783500A966C9 /* MainCollectionViewController.h */,
@@ -126,6 +139,11 @@
 					962658C11D3D6C0C00A966C9 = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = 6A3B9S8TK9;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -171,6 +189,7 @@
 				962658CA1D3D6C0C00A966C9 /* AppDelegate.m in Sources */,
 				962658C71D3D6C0C00A966C9 /* main.m in Sources */,
 				962658E71D3DB64500A966C9 /* DetailViewController.m in Sources */,
+				965DA7DC1D3EB22700C5F3DB /* MapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,6 +338,7 @@
 				962658DB1D3D6C0C00A966C9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
